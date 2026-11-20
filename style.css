@@ -127,7 +127,7 @@ nav {
 
 .overlay {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.05) 100%);
-    width: 100%;
+    width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -139,6 +139,7 @@ nav {
     text-align: center;
     min-height: 95vh;
     display: flex;
+    flex-direction: column;
     background-position: 50% center;
     background-size: 50vh;
 }
@@ -146,6 +147,7 @@ nav {
 .hero .overlay {
     background: radial-gradient(circle, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.85) 100%);
     justify-content: center;
+    width: 100%;
 }
 
 .hero h1 {
@@ -166,8 +168,13 @@ nav {
 .moon-banner {
     min-height: 75vh;
     display: flex;
-    background-position: 50% center;
+    background-position: 70% center;
     background-size: 55vh;  
+}
+
+.moon-banner-reverse {
+    flex-direction: row-reverse;
+    background-position: 30% center;
 }
 
 .moon-info {
@@ -322,27 +329,37 @@ footer {
 }
 
 /* Мобільна адаптація */
-
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .overlay {
+        width: 100%;
+    }
     .hero, .moon-banner {
         background-position: center center;
-        background-size: 75vw;
+        background-size: 50vw;
     }
+}
+@media (max-width: 950px) {
+    .hero, .moon-banner {
+        background-size: 60vw;
+    }
+}
+@media (max-width: 800px) {
     .overlay {
         background: rgba(0, 0, 0, 0.72);
     }
-
-    .hero h1 {
-        font-size: 2.3rem;
-    }
-
-    .moon-info h2 {
-        font-size: 2rem;
+}
+@media (max-width: 600px) {
+    .hero, .moon-banner {
+        background-size: 70vw;
     }
 }
 @media (max-width: 500px) {
     .logo-text {
         display: none !important;
+    }
+    .hero, .moon-banner {
+        background-position: center center;
+        background-size: 80vw;
     }
 
     .nav-container {
