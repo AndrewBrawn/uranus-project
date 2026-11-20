@@ -1,376 +1,504 @@
-*, *::before, *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 :root {
-    --bg-dark: #000000;
-    --bg-card: #111927;
-    --accent: #4fd1c5;
-    --accent-hover: #38b2ac;
-    --text-main: #f1f5f9;
-    --text-muted: #cbd5e1;
-    --border: #1e293b;
+  --bg-dark: #000000;
+  --bg-card: #111927;
+  --accent: #4fd1c5;
+  --accent-hover: #38b2ac;
+  --text-main: #f1f5f9;
+  --text-muted: #cbd5e1;
+  --border: #1e293b;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    line-height: 1.6;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-
 
 /* Хедер */
 
-
 header {
-    width: 100%;
-    background-color: rgba(7, 11, 20, 0.9);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--border);
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  width: 100%;
+  background-color: rgba(7, 11, 20, 0.9);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 50px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 16px;
-    gap: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+  gap: 12px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--accent);
-    text-decoration: none;
-    letter-spacing: 1px;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 1px;
+  flex-shrink: 0;
 }
 
 nav {
-    min-width: 0;
+  min-width: 0;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: nowrap;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: nowrap;
 }
 
 .nav-links a {
-    color: var(--text-main);
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.2s;
-    white-space: nowrap;
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* Уран і супутники */
 
-.hero, .moon-banner {
-    background-color: #000000;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
-    border-bottom: 1px solid var(--border);
+.hero,
+.moon-banner {
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  border-bottom: 1px solid var(--border);
 }
 
 /* Затемнення для кращого читання тексту на фоні зображення */
 
 .overlay {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.05) 100%);
-    width: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.4) 55%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 /* Головний екран (Уран) */
 
 .hero {
-    text-align: center;
-    min-height: 95vh;
-    display: flex;
-    flex-direction: column;
-    background-position: 50% center;
-    background-size: 50vh;
+  text-align: center;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  background-position: 50% center;
+  background-size: 50vh;
 }
 
 .hero .overlay {
-    background: radial-gradient(circle, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.85) 100%);
-    justify-content: center;
-    width: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  justify-content: center;
+  width: 100%;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 16px;
-    color: #ffffff;
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  color: #ffffff;
 }
 
 .subtitle {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    max-width: 700px;
-    margin: 0 auto 32px;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto 32px;
 }
 
 /* Супутники */
 
 .moon-banner {
-    min-height: 75vh;
-    display: flex;
-    background-position: 70% center;
-    background-size: 55vh;  
+  min-height: 75vh;
+  display: flex;
+  background-position: 70% center;
+  background-size: 55vh;
 }
 
 .moon-banner-reverse {
-    flex-direction: row-reverse;
-    background-position: 30% center;
+  flex-direction: row-reverse;
+  background-position: 30% center;
 }
 
 .moon-info {
-    max-width: 520px;
-    margin-left: 0;
-    padding: 40px 20px;
+  max-width: 520px;
+  margin-left: 0;
+  padding: 40px 20px;
 }
 
 .badge {
-    display: inline-block;
-    background-color: rgba(79, 209, 197, 0.15);
-    color: var(--accent);
-    border: 1px solid var(--accent);
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 12px;
+  display: inline-block;
+  background-color: rgba(79, 209, 197, 0.15);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .moon-info h2 {
-    font-size: 2.6rem;
-    color: #ffffff;
-    margin-bottom: 14px;
+  font-size: 2.6rem;
+  color: #ffffff;
+  margin-bottom: 14px;
 }
 
 .moon-info p {
-    font-size: 1.1rem;
-    color: var(--text-muted);
+  font-size: 1.1rem;
+  color: var(--text-muted);
 }
 
 /* Фонові зображення */
 
+.bg-horror {
+  background-image: url(img/uranus-horror.webp);
+  display: flex;
+  justify-content: center;
+  background-position: center center;
+  min-height: 60vh;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .bg-uranus {
-    background-image: url(img/uranus.jpg);
+  background-image: url(img/uranus.jpg);
 }
 
 .bg-miranda {
-    background-image: url(img/miranda.jpg);
+  background-image: url(img/miranda.jpg);
 }
 
 .bg-ariel {
-    background-image: url(img/ariel.jpg);
+  background-image: url(img/ariel.jpg);
 }
 
 .bg-umbriel {
-    background-image: url(img/umbriel.jpg);
+  background-image: url(img/umbriel.jpg);
 }
 
 .bg-titania {
-    background-image: url(img/titania.jpg);
+  background-image: url(img/titania.jpg);
 }
 
 .bg-oberon {
-    background-image: url(img/oberon.jpg);
+  background-image: url(img/oberon.jpg);
 }
 
 /* Cекції */
 
 .section {
-    padding: 70px 0;
-    border-bottom: 1px solid var(--border);
+  padding: 70px 0;
+  border-bottom: 1px solid var(--border);
 }
 
 .dark-bg {
-    background-color: var(--bg-dark);
+  background-color: var(--bg-dark);
 }
 
 .section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 28px;
-    color: var(--accent);
+  font-size: 1.8rem;
+  margin-bottom: 28px;
+  color: var(--accent);
 }
 
 /* Сітка */
 
 .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .card {
-    background-color: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
 }
 
 .card h3 {
-    margin-bottom: 12px;
-    font-size: 1.15rem;
+  margin-bottom: 12px;
+  font-size: 1.15rem;
 }
 
 .card p {
-    color: var(--text-muted);
-    font-size: 0.95rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
 /* Історія дослідження */
 
 .timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .timeline-item {
-    background-color: var(--bg-card);
-    border-left: 4px solid var(--accent);
-    padding: 18px 24px;
-    border-radius: 0 8px 8px 0;
+  background-color: var(--bg-card);
+  border-left: 4px solid var(--accent);
+  padding: 18px 24px;
+  border-radius: 0 8px 8px 0;
 }
 
 .year {
-    display: inline-block;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 6px;
+  display: inline-block;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+/* Тест */
+
+.quiz-box {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.quiz-question {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.quiz-question:last-child {
+  border-bottom: none;
+  margin-bottom: 16px;
+}
+
+.quiz-question h3 {
+  font-size: 1.15rem;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.quiz-option:hover {
+  border-color: var(--accent);
+}
+
+.quiz-option input[type="radio"] {
+  accent-color: var(--accent);
+  width: 16px;
+  height: 16px;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: #ffffff;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+/* Підсвічування правильних і помилкових відповідей */
+.correct-answer {
+  background-color: rgba(16, 185, 129, 0.2) !important;
+  border-color: #10b981 !important;
+}
+
+.wrong-answer {
+  background-color: rgba(239, 68, 68, 0.2) !important;
+  border-color: #ef4444 !important;
+}
+
+#submit-btn {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.quiz-result {
+  display: none;
+  margin-top: 20px;
+  padding: 16px;
+  background-color: rgba(79, 209, 197, 0.15);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font-size: 1.15rem;
+  color: #ffffff;
 }
 
 /* Посилання */
 
 .links-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .links-list a {
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 1.05rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1.05rem;
 }
 
 .links-list a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Футер */
 
 footer {
-    text-align: center;
-    padding: 30px 0;
+  text-align: center;
+  padding: 30px 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  a {
     color: var(--text-muted);
-    font-size: 0.9rem;
-    a {
-        color: var(--text-muted);
-        text-decoration: none;
-    }
+    text-decoration: none;
+  }
 }
 
 /* Мобільна адаптація */
 @media (max-width: 1200px) {
-    .overlay {
-        width: 100%;
-    }
-    .hero, .moon-banner {
-        background-position: center center;
-        background-size: 50vw;
-    }
+  .overlay {
+    width: 100%;
+  }
+  .hero,
+  .moon-banner {
+    background-position: center center;
+    background-size: 50vw;
+  }
 }
 @media (max-width: 950px) {
-    .hero, .moon-banner {
-        background-size: 60vw;
-    }
+  .hero,
+  .moon-banner {
+    background-size: 60vw;
+  }
 }
 @media (max-width: 800px) {
-    .overlay {
-        background: rgba(0, 0, 0, 0.72);
-    }
+  .overlay {
+    background: rgba(0, 0, 0, 0.72);
+  }
 }
 @media (max-width: 600px) {
-    .hero, .moon-banner {
-        background-size: 70vw;
-    }
+  .hero,
+  .moon-banner {
+    background-size: 70vw;
+  }
 }
 @media (max-width: 500px) {
-    .logo-text {
-        display: none !important;
-    }
-    .hero, .moon-banner {
-        background-position: center center;
-        background-size: 80vw;
-    }
+  .logo-text {
+    display: none !important;
+  }
+  .hero,
+  .moon-banner {
+    background-position: center center;
+    background-size: 80vw;
+  }
 
-    .nav-container {
-        padding: 0 12px;
-        gap: 8px;
-    }
+  .nav-container {
+    padding: 0 12px;
+    gap: 8px;
+  }
 
-    .nav-links {
-        gap: 12px;
-    }
-    .nav-links a {
-        font-size: 0.90rem; 
-    }
+  .nav-links {
+    gap: 12px;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
 }
