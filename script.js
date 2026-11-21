@@ -102,11 +102,21 @@ submitBtn.addEventListener("click", () => {
   });
 
   if (score == 0) {
-    resultBox.classList.remove("quiz-result");
+    for (let i = 0; i < resultBox.classList.length; i++) {
+      resultBox.classList.remove(resultBox.classList[i]);
+    }
     resultBox.classList.add("bg-horror");
     resultBox.innerHTML = ``;
+  } else if (score === quizData.length) {
+    for (let i = 0; i < resultBox.classList.length; i++) {
+      resultBox.classList.remove(resultBox.classList[i]);
+    }
+    resultBox.classList.add("bg-credit");
+    resultBox.innerHTML = ``;
   } else {
-    resultBox.classList.remove("bg-horror");
+    for (let i = 0; i < resultBox.classList.length; i++) {
+      resultBox.classList.remove(resultBox.classList[i]);
+    }
     resultBox.classList.add("quiz-result");
     resultBox.innerHTML = `Ваш результат: <strong>${score} з ${quizData.length}</strong> правильних відповідей!`;
   }

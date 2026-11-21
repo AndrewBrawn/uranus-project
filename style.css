@@ -229,10 +229,21 @@ nav {
   display: flex;
   justify-content: center;
   background-position: center center;
-  min-height: 60vh;
+  aspect-ratio: 16 / 9;
   background-color: #000000;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+}
+
+.bg-credit {
+  background-image: url(img/uranus-credit.jpg);
+  display: flex;
+  justify-content: center;
+  background-position: center center;
+  aspect-ratio: 16 / 9;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg-uranus {
